@@ -1,0 +1,21 @@
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Quiet Storm.exe
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Quiet Storm.deps.json
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Quiet Storm.runtimeconfig.json
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Quiet Storm.dll
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Quiet Storm.pdb
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\MainWindow.g.cs
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\App.g.cs
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm_MarkupCompile.cache
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm_MarkupCompile.lref
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\MainWindow.baml
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.g.resources
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.AssemblyInfoInputs.cache
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.AssemblyInfo.cs
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.csproj.CoreCompileInputs.cache
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.dll
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\refint\Quiet Storm.dll
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.pdb
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.genruntimeconfig.cache
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\ref\Quiet Storm.dll
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm_Content.g.cs
