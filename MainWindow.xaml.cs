@@ -16,6 +16,7 @@ namespace Quiet_Storm
         List<Thread> threads;
         bool started = false;
         int currentRequestsCount = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -89,6 +90,7 @@ namespace Quiet_Storm
             threads.Clear();
 
             currentRequestsCountLabel.Content = "0";
+            currentRequestsCount = 0;
             urlTextBox.IsEnabled = true;
             threadsTextBox.IsEnabled = true;
             requestsTextBox.IsEnabled = true;
@@ -103,9 +105,8 @@ namespace Quiet_Storm
                         if (!started) break;
                         
                         HttpClient httpClient = new HttpClient();
-                        // определяем данные запроса
                         using HttpRequestMessage requestGET = new HttpRequestMessage(HttpMethod.Get, url.ToString());
-                        // выполняем запрос
+
                         HttpResponseMessage responseGET = await httpClient.SendAsync(requestGET);
                         statusStr = responseGET.StatusCode.ToString();
                         statusCode = (int)responseGET.StatusCode;

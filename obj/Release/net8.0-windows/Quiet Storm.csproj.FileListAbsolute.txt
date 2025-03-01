@@ -19,3 +19,4 @@ C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.pdb
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.genruntimeconfig.cache
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\ref\Quiet Storm.dll
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm_Content.g.cs
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.sourcelink.json
