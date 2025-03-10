@@ -5,6 +5,7 @@ C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Quiet Storm.dll
 C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Quiet Storm.pdb
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\MainWindow.g.cs
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\App.g.cs
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm_Content.g.cs
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm_MarkupCompile.cache
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm_MarkupCompile.lref
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\MainWindow.baml
@@ -13,10 +14,20 @@ C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.Gen
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.AssemblyInfoInputs.cache
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.AssemblyInfo.cs
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.csproj.CoreCompileInputs.cache
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.sourcelink.json
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.dll
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\refint\Quiet Storm.dll
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.pdb
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.genruntimeconfig.cache
 C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\ref\Quiet Storm.dll
-C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm_Content.g.cs
-C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.sourcelink.json
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet Storm.csproj.AssemblyReference.cache
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Microsoft.Web.WebView2.Core.xml
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\DNS\source\repos\Quiet Storm\bin\Release\net8.0-windows\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\DNS\source\repos\Quiet Storm\obj\Release\net8.0-windows\Quiet St.54DC9548.Up2Date

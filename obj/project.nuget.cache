@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "w01q0gTkwhk=",
+  "dgSpecHash": "1TV9eqHE9uQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\DNS\\source\\repos\\Quiet Storm\\Quiet Storm.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\DNS\\.nuget\\packages\\microsoft.web.webview2\\1.0.3124.44\\microsoft.web.webview2.1.0.3124.44.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,26 +1,25 @@
-﻿using System.Net.Http;
+﻿using System.Diagnostics;
+using System.Net.Http;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Threading;
 
 
-namespace Quiet_Storm
-{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
+namespace Quiet_Storm{
+
+    public partial class MainWindow : Window {
 
         List<Thread> threads;
         bool started = false;
         int currentRequestsCount = 0;
+        int showPageInterval = 1;
 
-        public MainWindow()
-        {
+        public MainWindow(){
             InitializeComponent();
-            
+
             threadsTextBox.PreviewTextInput += numericTextBox_PreviewTextInput;
             threadsTextBox.LostFocus += numericTextBox_LostFocus;
             requestsTextBox.PreviewTextInput += numericTextBox_PreviewTextInput;
@@ -29,10 +28,25 @@ namespace Quiet_Storm
             stopButton.Click += stopButton_Click;
             threads = new List<Thread>();
             scroll.ScrollToEnd();
+
+            InitializeWebView();
+
         }
 
-        private void numericTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
+
+        async void InitializeWebView(){
+            await browser.EnsureCoreWebView2Async(); 
+            if (browser.CoreWebView2 != null){
+                browser.CoreWebView2.Settings.AreDevToolsEnabled = false; 
+                browser.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
+
+               await Refreshing();
+            } else{
+                MessageBox.Show("Неизвестная ошибка", "Ошибка");
+            }
+        }
+
+        private void numericTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e){
             Regex regex = new Regex("[^0-9]+");
             if (regex.IsMatch(e.Text))
             {
@@ -40,14 +54,12 @@ namespace Quiet_Storm
             }
         }
 
-        private void numericTextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
+        private void numericTextBox_LostFocus(object sender, RoutedEventArgs e){
             TextBox textBox = ((TextBox)sender);
             if (String.IsNullOrWhiteSpace(textBox.Text)) textBox.Text = "0";
         }
 
-        private void startButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void startButton_Click(object sender, RoutedEventArgs e){
             if (threads.Count > 0 || started) return;
             started = true;
 
@@ -66,7 +78,8 @@ namespace Quiet_Storm
                 errorsStr += "Введите количество потоков\n";
             if (String.IsNullOrWhiteSpace(requestsTextBox.Text))
                 errorsStr += "Введите количество запросов\n";
-            if (errorsStr.Length > 0){
+            if (errorsStr.Length > 0)
+            {
                 MessageBox.Show(errorsStr);
                 return;
             }
@@ -74,7 +87,8 @@ namespace Quiet_Storm
             int threadsCount = Int32.Parse(threadsStr);
             int requestsCount = Int32.Parse(requestsStr);
 
-            for (int i = 0; i < threadsCount; i++) {
+            for (int i = 0; i < threadsCount; i++)
+            {
                 Thread thread = new Thread((ParameterizedThreadStart)(delegate { Go(url, requestsCount); }));
                 threads.Add(thread);
                 thread.Start();
@@ -86,7 +100,7 @@ namespace Quiet_Storm
             statusTextBlock.Text = "";
             started = false;
             foreach (Thread thread in threads)
-                if(thread.IsAlive) thread.Interrupt();
+                if (thread.IsAlive) thread.Interrupt();
             threads.Clear();
 
             currentRequestsCountLabel.Content = "0";
@@ -96,48 +110,62 @@ namespace Quiet_Storm
             requestsTextBox.IsEnabled = true;
         }
 
-            private async void Go(string url, int requests) {
-                try{
-                    int statusCode;
-                    string statusStr;
-                    string statusesStr = "";
-                    for (int i = 0; i < requests; i++){
-                        if (!started) break;
-                        
-                        HttpClient httpClient = new HttpClient();
-                        using HttpRequestMessage requestGET = new HttpRequestMessage(HttpMethod.Get, url.ToString());
+        private async void Go(string url, int requests){
+            try
+            {
+                int statusCode;
+                string statusStr;
+                string statusesStr = "";
+                for (int i = 0; i < requests; i++)
+                {
+                    if (!started) break;
 
-                        HttpResponseMessage responseGET = await httpClient.SendAsync(requestGET);
-                        statusStr = responseGET.StatusCode.ToString();
-                        statusCode = (int)responseGET.StatusCode;
-                        statusesStr += $"GET {statusCode}:{statusStr}\n";
-                        ++currentRequestsCount;   
+                    HttpClient httpClient = new HttpClient();
+                    using HttpRequestMessage requestGET = new HttpRequestMessage(HttpMethod.Get, url.ToString());
 
-                        using HttpRequestMessage requestPOST = new HttpRequestMessage(HttpMethod.Post, url.ToString());
-                        HttpResponseMessage responsePOST = await httpClient.SendAsync(requestPOST);
-                        statusStr = responsePOST.StatusCode.ToString();
-                        statusCode = (int)responsePOST.StatusCode;
-                        statusesStr += $"POST {statusCode}:{statusStr}\n";
-                        ++currentRequestsCount;
-                        
-                        System.Windows.Application.Current.Dispatcher.Invoke(() => {
-                            statusTextBlock.Text = statusesStr;
-                            currentRequestsCountLabel.Content = currentRequestsCount;
-                        });
+                    HttpResponseMessage responseGET = await httpClient.SendAsync(requestGET);
+                    statusStr = responseGET.StatusCode.ToString();
+                    statusCode = (int)responseGET.StatusCode;
+                    statusesStr += $"GET {statusCode}:{statusStr}\n";
+                    ++currentRequestsCount;
 
-                    }
-                }catch (Exception ex) {
-                     System.Windows.Application.Current.Dispatcher.Invoke(() => {
-                         statusTextBlock.Text = "\nНеизвестная ошибка";
-                         currentRequestsCountLabel.Content = "0";
+                    using HttpRequestMessage requestPOST = new HttpRequestMessage(HttpMethod.Post, url.ToString());
+                    HttpResponseMessage responsePOST = await httpClient.SendAsync(requestPOST);
+                    statusStr = responsePOST.StatusCode.ToString();
+                    statusCode = (int)responsePOST.StatusCode;
+                    statusesStr += $"POST {statusCode}:{statusStr}\n";
+                    ++currentRequestsCount;
 
-                         urlTextBox.IsEnabled = true;
-                         threadsTextBox.IsEnabled = true;
-                         requestsTextBox.IsEnabled = true;
-                     });
+                    System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        statusTextBlock.Text = statusesStr;
+                        currentRequestsCountLabel.Content = currentRequestsCount;
+                    });
 
-            }   
+                }
+            }catch (Exception ex){
+                System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                {
+                    statusTextBlock.Text = $"\n{ex.Message}";
+                    currentRequestsCountLabel.Content = "0";
+
+                    urlTextBox.IsEnabled = true;
+                    threadsTextBox.IsEnabled = true;
+                    requestsTextBox.IsEnabled = true;
+                });
+
+            }
         }
 
+        async Task Refreshing(){
+            while (true){
+                if (started){
+                    browser.CoreWebView2.Navigate(urlTextBox.Text);
+                    await Task.Delay(TimeSpan.FromSeconds(showPageInterval));
+                }else{
+                    await Task.Delay(TimeSpan.FromSeconds(1)); 
+                }
+            }
+        }
     }
 }

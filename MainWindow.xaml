@@ -3,27 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Quiet_Storm"
+        xmlns:local="clr-namespace:Quiet_Storm" xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         mc:Ignorable="d"
-        Title="Quiet Storm" Height="450" Width="486" ResizeMode="NoResize">
+        Title="Quiet Storm" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Margin="0,6,0,-6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="578*"/>
-            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="461*"/>
+            <ColumnDefinition Width="339*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="URL" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" Width="43" FontWeight="Bold" FontSize="14"/>
-        <Label Content="Потоки" HorizontalAlignment="Left" Margin="22,51,0,0" VerticalAlignment="Top" Width="76" FontWeight="Bold" FontSize="14"/>
-        <Label Content="Запросы" HorizontalAlignment="Left" Margin="22,77,0,0" VerticalAlignment="Top" Width="114" FontWeight="Bold" FontSize="14"/>
-        <TextBox x:Name="urlTextBox" HorizontalAlignment="Left" Margin="164,17,0,0" VerticalAlignment="Top" Width="200"/>
-        <TextBox x:Name="threadsTextBox" MaxLength="3" HorizontalAlignment="Left" Margin="164,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="requestsTextBox" MaxLength="3" HorizontalAlignment="Left" Margin="164,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="startButton" Content="Старт" HorizontalAlignment="Left" Margin="31,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.033,0.478"/>
-        <Button x:Name="stopButton" Content="Стoп" HorizontalAlignment="Left" Margin="85,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.033,0.478"/>
-        <ScrollViewer x:Name="scroll" Margin="10,159,114,31">
-            <TextBlock x:Name="statusTextBlock" TextWrapping="Wrap" Height="241" Width="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" IsEnabled="false" />
+        <Label Content="URL" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" Width="43" FontWeight="Bold" FontSize="14" Height="29"/>
+        <Label Content="Потоки" HorizontalAlignment="Left" Margin="22,51,0,0" VerticalAlignment="Top" Width="76" FontWeight="Bold" FontSize="14" Height="29"/>
+        <Label Content="Запросы" HorizontalAlignment="Left" Margin="22,77,0,0" VerticalAlignment="Top" Width="114" FontWeight="Bold" FontSize="14" Height="29"/>
+        <TextBox x:Name="urlTextBox" HorizontalAlignment="Left" Margin="164,17,0,0" VerticalAlignment="Top" Width="200" Height="18"/>
+        <TextBox x:Name="threadsTextBox" MaxLength="3" HorizontalAlignment="Left" Margin="164,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="requestsTextBox" MaxLength="3" HorizontalAlignment="Left" Margin="164,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Button x:Name="startButton" Content="Старт" HorizontalAlignment="Left" Margin="31,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.033,0.478" Height="20" Width="34"/>
+        <Button x:Name="stopButton" Content="Стoп" HorizontalAlignment="Left" Margin="85,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.033,0.478" Height="20" Width="30"/>
+        <ScrollViewer x:Name="scroll" Margin="10,159,10,10">
+            <TextBlock x:Name="statusTextBlock" TextWrapping="Wrap" Height="242" Width="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" IsEnabled="false" />
         </ScrollViewer>
-        <Label Content="Количество: " HorizontalAlignment="Left" Margin="31,136,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="currentRequestsCountLabel" Content="0" HorizontalAlignment="Left" Margin="111,136,0,0" VerticalAlignment="Top" Width="113"/>
-        <Label Content="Формат: https://facebook.com" HorizontalAlignment="Left" Margin="161,31,0,0" VerticalAlignment="Top" Width="185"/>
+        <Label Content="Количество: " HorizontalAlignment="Left" Margin="31,136,0,0" VerticalAlignment="Top" Height="26" Width="80"/>
+        <Label x:Name="currentRequestsCountLabel" Content="0" HorizontalAlignment="Left" Margin="111,136,0,0" VerticalAlignment="Top" Width="113" Height="26"/>
+        <Label Content="Формат: https://facebook.com" HorizontalAlignment="Left" Margin="161,31,0,0" VerticalAlignment="Top" Width="185" Height="26"/>
+        <wv2:WebView2 x:Name="browser" Grid.Column="1" Margin="0,159,10,10"/>
     </Grid>
 </Window>

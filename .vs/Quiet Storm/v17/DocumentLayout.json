@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DNS\\source\\repos\\Quiet Storm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{310174D6-0113-4FF1-B0FD-A358723DD9AD}|Quiet Storm.csproj|c:\\users\\dns\\source\\repos\\quiet storm\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{310174D6-0113-4FF1-B0FD-A358723DD9AD}|Quiet Storm.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{310174D6-0113-4FF1-B0FD-A358723DD9AD}|Quiet Storm.csproj|c:\\users\\dns\\source\\repos\\quiet storm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{310174D6-0113-4FF1-B0FD-A358723DD9AD}|Quiet Storm.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{310174D6-0113-4FF1-B0FD-A358723DD9AD}|Quiet Storm.csproj|c:\\users\\dns\\source\\repos\\quiet storm\\quiet storm.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{310174D6-0113-4FF1-B0FD-A358723DD9AD}|Quiet Storm.csproj|solutionrelative:quiet storm.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\DNS\\source\\repos\\Quiet Storm\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\DNS\\source\\repos\\Quiet Storm\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-01T08:38:54.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\DNS\\source\\repos\\Quiet Storm\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\DNS\\source\\repos\\Quiet Storm\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAIAwwHUAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T23:35:58.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Quiet Storm",
+              "DocumentMoniker": "C:\\Users\\DNS\\source\\repos\\Quiet Storm\\Quiet Storm.csproj",
+              "RelativeDocumentMoniker": "Quiet Storm.csproj",
+              "ToolTip": "C:\\Users\\DNS\\source\\repos\\Quiet Storm\\Quiet Storm.csproj",
+              "RelativeToolTip": "Quiet Storm.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-01T08:57:21.73Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
